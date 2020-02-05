@@ -14,12 +14,8 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    gender: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    email_phone: {
+ 
+    email: {
         type: String,
         required: true,
         unique: true,
@@ -52,7 +48,7 @@ const userSchema = new Schema({
 });
 
 userSchema.statics.checkCrediantialsDb = async (user11, pass11) => {
-    const user1 = USER.findOne({ email: user11, password: pass11 });
+    const user1 = User.findOne({ email: user11, password: pass11 });
     return user1;
 }
 
