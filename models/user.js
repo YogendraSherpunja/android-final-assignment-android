@@ -26,7 +26,7 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    birthday:{
+    phone:{
         type:String,
         required:true,
         trim:true
@@ -36,9 +36,18 @@ const userSchema = new Schema({
         required:true,
         trim:true
     },
- 
-   
- 
+
+    bio:{
+        type:String,
+        trim:true
+    },
+
+    address:{ 
+        type:String,
+        trim:true
+        
+    },
+
     tokens: [{
         token: {
             type: String,
